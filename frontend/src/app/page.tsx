@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react'; 
 import { Delete, Clock, X } from 'lucide-react';
 
 const COLORS = {
