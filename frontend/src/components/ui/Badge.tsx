@@ -52,4 +52,3 @@ export const Badge: React.FC<BadgeProps> = ({
     </span>
   );
 };
-}
