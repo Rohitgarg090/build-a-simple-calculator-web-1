@@ -363,7 +363,7 @@ export default function Page() {
             >+</button>
 
             {/* Row 5 */}
-            <button style={{ ...btnStyle('default'), gridColumn: 'span 1' }} onClick={() => inputDigit(0)}
+            <button style={{ ...btnStyle('default'), gridColumn: 'span 1' } as React.CSSProperties} onClick={() => inputDigit(0)}
               onMouseDown={e => e.currentTarget.style.transform = 'scale(0.95)'}
               onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
@@ -373,7 +373,7 @@ export default function Page() {
               onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
             >.</button>
-            <button style={{ ...btnStyle('function'), fontSize: '0.85rem' }} onClick={backspace}
+            <button style={{ ...btnStyle('function'), fontSize: '0.85rem' } as React.CSSProperties} onClick={backspace}
               onMouseDown={e => e.currentTarget.style.transform = 'scale(0.95)'}
               onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
