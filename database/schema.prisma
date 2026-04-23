@@ -1,0 +1,29 @@
+// ============================================================
+// SpecKAI — Calculator App Prisma Schema
+// Note: Core calculator functionality is fully client-side.
+// This schema is OPTIONAL and only needed if you extend the
+// app with server-side history persistence in the future.
+// ============================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// Optional: Stores calculation history per session or user.
+/// Not required for core MVP functionality.
+model CalculationHistory {
+  id         String   @id @default(cuid())
+  expression String   // e.g. "12 + 34 * 2"
+  result     String   // e.g. "80"
+  sessionId  String?  // browser session identifier (optional)
+  createdAt  DateTime @default(now())
+
+  @@index([sessionId])
+  @@index([createdAt])
+  @@map("calculation_history")
+}
