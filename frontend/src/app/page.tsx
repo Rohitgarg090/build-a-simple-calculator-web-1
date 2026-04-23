@@ -299,7 +299,7 @@ export default function Page() {
           {/* Keypad */}
           <div style={{ padding: '20px', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '12px' }}>
             {/* Row 1 */}
-            <button style={btnStyle('clear')} onClick={clearAll}
+            <button style={btnStyle('clear') as React.CSSProperties} onClick={clearAll}
               onMouseDown={e => e.currentTarget.style.transform = 'scale(0.95)'}
               onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
