@@ -304,17 +304,17 @@ export default function Page() {
               onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
             >AC</button>
-            <button style={btnStyle('function')} onClick={toggleSign}
+            <button style={btnStyle('function') as React.CSSProperties} onClick={toggleSign}
               onMouseDown={e => e.currentTarget.style.transform = 'scale(0.95)'}
               onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
             >+/-</button>
-            <button style={btnStyle('function')} onClick={percentage}
+            <button style={btnStyle('function') as React.CSSProperties} onClick={percentage}
               onMouseDown={e => e.currentTarget.style.transform = 'scale(0.95)'}
               onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
             >%</button>
-            <button style={btnStyle('operator')} onClick={() => handleOperator('÷')}
+            <button style={btnStyle('operator') as React.CSSProperties} onClick={() => handleOperator('÷')}
               onMouseDown={e => e.currentTarget.style.transform = 'scale(0.95)'}
               onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
@@ -322,13 +322,13 @@ export default function Page() {
 
             {/* Row 2 */}
             {[7, 8, 9].map(n => (
-              <button key={n} style={btnStyle('default')} onClick={() => inputDigit(n)}
+              <button key={n} style={btnStyle('default') as React.CSSProperties} onClick={() => inputDigit(n)}
                 onMouseDown={e => e.currentTarget.style.transform = 'scale(0.95)'}
                 onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
                 onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
               >{n}</button>
             ))}
-            <button style={btnStyle('operator')} onClick={() => handleOperator('×')}
+            <button style={btnStyle('operator') as React.CSSProperties} onClick={() => handleOperator('×')}
               onMouseDown={e => e.currentTarget.style.transform = 'scale(0.95)'}
               onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
@@ -336,13 +336,13 @@ export default function Page() {
 
             {/* Row 3 */}
             {[4, 5, 6].map(n => (
-              <button key={n} style={btnStyle('default')} onClick={() => inputDigit(n)}
+              <button key={n} style={btnStyle('default') as React.CSSProperties} onClick={() => inputDigit(n)}
                 onMouseDown={e => e.currentTarget.style.transform = 'scale(0.95)'}
                 onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
                 onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
               >{n}</button>
             ))}
-            <button style={btnStyle('operator')} onClick={() => handleOperator('-')}
+            <button style={btnStyle('operator') as React.CSSProperties} onClick={() => handleOperator('-')}
               onMouseDown={e => e.currentTarget.style.transform = 'scale(0.95)'}
               onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
@@ -350,13 +350,13 @@ export default function Page() {
 
             {/* Row 4 */}
             {[1, 2, 3].map(n => (
-              <button key={n} style={btnStyle('default')} onClick={() => inputDigit(n)}
+              <button key={n} style={btnStyle('default') as React.CSSProperties} onClick={() => inputDigit(n)}
                 onMouseDown={e => e.currentTarget.style.transform = 'scale(0.95)'}
                 onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
                 onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
               >{n}</button>
             ))}
-            <button style={btnStyle('operator')} onClick={() => handleOperator('+')}
+            <button style={btnStyle('operator') as React.CSSProperties} onClick={() => handleOperator('+')}
               onMouseDown={e => e.currentTarget.style.transform = 'scale(0.95)'}
               onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
@@ -368,7 +368,7 @@ export default function Page() {
               onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
             >0</button>
-            <button style={btnStyle('default')} onClick={inputDecimal}
+            <button style={btnStyle('default') as React.CSSProperties} onClick={inputDecimal}
               onMouseDown={e => e.currentTarget.style.transform = 'scale(0.95)'}
               onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
@@ -380,7 +380,7 @@ export default function Page() {
             >
               <Delete size={20} />
             </button>
-            <button style={btnStyle('equals')} onClick={calculate}
+            <button style={btnStyle('equals') as React.CSSProperties} onClick={calculate}
               onMouseDown={e => e.currentTarget.style.transform = 'scale(0.95)'}
               onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
